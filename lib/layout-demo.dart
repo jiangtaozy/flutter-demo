@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'favorite-widget.dart';
 
 class LayoutDemo extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     Widget titleSection = Container(
@@ -29,11 +31,7 @@ class LayoutDemo extends StatelessWidget {
               ],
             ),
           ),
-          Icon(
-            Icons.star,
-            color: Colors.red[500],
-          ),
-          Text('41'),
+          FavoriteWidget(),
         ],
       ),
     );
