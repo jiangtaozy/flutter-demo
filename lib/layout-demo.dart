@@ -59,9 +59,6 @@ class LayoutDemo extends StatelessWidget {
       ),
     );
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Layout Demo'),
-      ),
       body: ListView(
         children: [
           Image.asset(

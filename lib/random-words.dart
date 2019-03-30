@@ -5,7 +5,9 @@ class RandomWords extends StatefulWidget {
 
   @override
   RandomWordsState createState() => new RandomWordsState();
+
 }
+
 
 class RandomWordsState extends State<RandomWords> {
 
@@ -15,9 +17,6 @@ class RandomWordsState extends State<RandomWords> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Startup Name Generator'),
-      ),
       body: _buildSuggestions(),
     );
     final wordPair = WordPair.random();
@@ -46,4 +45,5 @@ class RandomWordsState extends State<RandomWords> {
       ),
     );
   }
+
 }
