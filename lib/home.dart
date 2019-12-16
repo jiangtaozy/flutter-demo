@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'layout-demo.dart';
 import 'random-words.dart';
+import 'custom-paint-demo.dart';
 
 class Home extends StatefulWidget {
 
@@ -13,11 +14,11 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
-  int _selectedIndex = 1;
+  int _selectedIndex = 2;
   final _widgetOptions = [
     LayoutDemo(),
     RandomWords(),
-    Text('Index 2: School'),
+    CustomPaintDemo(),
   ];
 
   @override
@@ -33,7 +34,7 @@ class _HomeState extends State<Home> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('Layout')),
           BottomNavigationBarItem(icon: Icon(Icons.business), title: Text('List')),
-          BottomNavigationBarItem(icon: Icon(Icons.school), title: Text('School')),
+          BottomNavigationBarItem(icon: Icon(Icons.brush), title: Text('Paint')),
         ],
         currentIndex: _selectedIndex,
         fixedColor: Colors.deepPurple,
