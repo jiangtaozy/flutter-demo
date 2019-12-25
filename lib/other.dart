@@ -12,6 +12,7 @@ import 'animate-widget-physics.dart';
 import 'animate-container.dart';
 import 'fade-widget-in.dart';
 import 'transform-rotate.dart';
+import 'rotate-animate.dart';
 
 class Other extends StatelessWidget {
   @override
@@ -73,6 +74,14 @@ class Other extends StatelessWidget {
             }));
           },
           child: Text('transform rotate'),
+        ),
+        RaisedButton(
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (_) {
+              return RotateAnimate();
+            }));
+          },
+          child: Text('rotate animate'),
         ),
       ],
     );
