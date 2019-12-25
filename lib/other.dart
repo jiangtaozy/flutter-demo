@@ -11,6 +11,7 @@ import 'animate-page.dart';
 import 'animate-widget-physics.dart';
 import 'animate-container.dart';
 import 'fade-widget-in.dart';
+import 'transform-rotate.dart';
 
 class Other extends StatelessWidget {
   @override
@@ -64,6 +65,14 @@ class Other extends StatelessWidget {
             }));
           },
           child: Text('Fade a widget in and out'),
+        ),
+        RaisedButton(
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (_) {
+              return TransformRotate();
+            }));
+          },
+          child: Text('transform rotate'),
         ),
       ],
     );
