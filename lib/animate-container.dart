@@ -19,6 +19,7 @@ class _AnimatedContainerAppState extends State<AnimatedContainerApp> {
   double _height = 50;
   Color _color = Colors.green;
   BorderRadiusGeometry _borderRadius = BorderRadius.circular(8);
+  double _rotate = 0.2;
 
   @override
   Widget build(BuildContext context) {
@@ -40,6 +41,7 @@ class _AnimatedContainerAppState extends State<AnimatedContainerApp> {
             duration: Duration(seconds: 1),
             // Provide an optional curve to make the animation feel smoother.
             curve: Curves.fastOutSlowIn,
+            transform: Matrix4.rotationZ(_rotate),
           ),
         ),
         floatingActionButton: FloatingActionButton(
@@ -66,6 +68,7 @@ class _AnimatedContainerAppState extends State<AnimatedContainerApp> {
               // Generate a random border radius.
               _borderRadius =
                   BorderRadius.circular(random.nextInt(100).toDouble());
+              _rotate = random.nextDouble();
             });
           },
         ),

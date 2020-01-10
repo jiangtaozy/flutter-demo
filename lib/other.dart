@@ -13,6 +13,8 @@ import 'animate-container.dart';
 import 'fade-widget-in.dart';
 import 'transform-rotate.dart';
 import 'rotate-animate.dart';
+import 'radio-demo.dart';
+import 'custom-radio.dart';
 
 class Other extends StatelessWidget {
   @override
@@ -82,6 +84,22 @@ class Other extends StatelessWidget {
             }));
           },
           child: Text('rotate animate'),
+        ),
+        RaisedButton(
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (_) {
+              return RadioDemo();
+            }));
+          },
+          child: Text('Radio Demo'),
+        ),
+        RaisedButton(
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (_) {
+              return CustomRadio();
+            }));
+          },
+          child: Text('Custom Radio'),
         ),
       ],
     );
